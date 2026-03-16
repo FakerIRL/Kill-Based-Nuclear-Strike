@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nuke UI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="scan"></div>
+
+  <div id="hud" class="hud hidden">
+    <div class="hudBox">
+      <div class="hudTitle">SCORE</div>
+      <div class="hudLine">
+        <span id="hudKills">0</span>
+        <span class="hudSub">/ 20</span>
+      </div>
+      <div id="hudReady" class="hudReady hidden">NUCLÉAIRE DISPONIBLE</div>
+      <div id="hudExit" class="hudExit hidden">ÉCHAP pour sortir</div>
+    </div>
+  </div>
+
+  <div id="armedMini" class="armedMini hidden">
+    <div class="miniBox">
+      <div class="miniTitle">NUCLÉAIRE</div>
+      <div class="miniSub">F6 pour agrandir</div>
+    </div>
+  </div>
+
+  <div id="armed" class="overlay hidden">
+    <div class="tablet">
+      <div class="tabTop">
+        <div class="tabChip"></div>
+        <div class="tabTitle">TACTICAL TABLET</div>
+        <div class="tabRight">ARMED</div>
+      </div>
+      <div class="tabBody">
+        <div class="big">NUCLÉAIRE DISPONIBLE</div>
+        <div class="mid">Maintenez <span class="key">F6</span> pendant <span class="hl">3 secondes</span></div>
+        <div class="small">ÉCHAP pour réduire</div>
+
+        <div class="holdWrap">
+          <div class="holdBar">
+            <div id="armedFill" class="holdFill"></div>
+          </div>
+          <div id="armedText" class="holdText">HOLD TO CONFIRM</div>
+        </div>
+      </div>
+      <div class="tabBottom">
+        <div class="mono">STATUS: ARMED</div>
+        <div class="mono">PROTOCOL: ALPHA</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="countLocal" class="countLocal hidden">
+    <div class="countLocalBox">
+      <div class="countLocalTitle">NUC</div>
+      <div id="countLocalNum" class="countLocalNum">5</div>
+      <div class="countLocalSub">DÉCLENCHEMENT</div>
+    </div>
+  </div>
+
+  <div id="warning" class="overlay hidden">
+    <div class="tablet danger">
+      <div class="tabTop">
+        <div class="tabChip"></div>
+        <div class="tabTitle">TACTICAL ALERT</div>
+        <div class="tabRight">INCOMING</div>
+      </div>
+
+      <div class="tabBody">
+        <div class="big dangerText">NUCLEAR STRIKE</div>
+        <div class="mid">Mettez-vous à l'abri</div>
+
+        <div class="countWrap">
+          <div class="countLabel">IMPACT DANS</div>
+          <div id="warnCount" class="countNum">5</div>
+        </div>
+
+        <div class="small">Zone dangereuse: <span class="hl">200m</span></div>
+      </div>
+
+      <div class="tabBottom">
+        <div class="mono">STATUS: EVACUATE</div>
+        <div class="mono">SIGNAL: ACTIVE</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="hack" class="hack hidden">
+    <div class="hackFrame">
+      <div class="hackTop">
+        <div class="hackDot"></div>
+        <div class="hackTitle">NUCLEAR CONSOLE</div>
+        <div class="hackRight">LINK: ACTIVE</div>
+      </div>
+      <pre id="hackText" class="hackText"></pre>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
